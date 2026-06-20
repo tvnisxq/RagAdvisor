@@ -124,16 +124,45 @@ def main():
     
     with col2:
         st.subheader("Legal Terms")
-        legal_terms = [
-            "Plaintiff", 
-            "Defendant", 
-            "Liability", 
-            "Jurisdiction",
-            "Deposition"
-        ]
-        for term in legal_terms:
+
+        LEGAL_DEFINITIONS = {
+            "Plaintiff": (
+                "A person, company, or entity that brings a lawsuit against another "
+                "party in a court of law."
+            ),
+            "Defendant": (
+                "A person, company, or entity being sued or accused in a legal proceeding."
+            ),
+            "Liability": (
+                "A legal responsibility or obligation for damages, debts, or other legal duties."
+            ),
+            "Jurisdiction": (
+                "The legal authority of a court to hear and decide a particular case."
+            ),
+            "Deposition": (
+                "A sworn out-of-court testimony given by a witness before trial and recorded "
+                "for later use in court."
+            ),
+            "Contract": (
+                "A legally enforceable agreement between two or more parties."
+            ),
+            "Breach of Contract": (
+                "The failure of a party to fulfill obligations specified in a contract."
+            ),
+            "Negligence": (
+                "Failure to exercise reasonable care, resulting in harm or damage to another person."
+            ),
+            "Damages": (
+                "Monetary compensation awarded to a person who has suffered loss or injury."
+            ),
+            "Settlement": (
+                "An agreement between parties that resolves a dispute without a trial."
+            ),
+        }
+
+        for term, definition in LEGAL_DEFINITIONS.items():
             with st.expander(term):
-                st.write(f"This is where a definition for {term} would appear.")
+                st.write(definition)
 
 if __name__ == "__main__":
     main()
